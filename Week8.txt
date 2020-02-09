@@ -1,0 +1,40 @@
+Linked list
+เป็นโครงสร้างข้อมูลที่ออกแบบมาใช้เก็บข้อมูล โดยข้อมูลแต่ละตัวเชื่อมต่อกันเป็นสาย
+
+Structure 
+เป็นการกำหนดรูปแบบหรือโครงสร้างที่มีการรวบรวมตัวแปร
+การประกาศตัวแปร Structure
+ struct name std;
+โดย std มีโครงสร้างตามม struct name
+การเข้าถึงสมาชิกแต่ละฟิลด์ของ Structure สามารถทำได้โดยใช้ dot operator (.)
+
+การประกาศตัวแปร Structure พร้อมกำหนดค่า
+ struct student another_std = {"6210451373", "Pheem pheemaphat", 18};
+
+ตัวแปร pointer ไป Structure 
+ การเข้าถึงตัวแปรผ่าน pointer 
+ struct student std, *p_std;    
+ p_std = &std;
+ printf("%s\n", (*p_std).name);
+ (*p_std).age = 18;
+
+การใช้ typedef 
+ กำหนดประเภทข้อมูลขึ้นมาเพิ่มเติมผ่าน typedef 
+ Ex typedef unsigned long int ulint;
+ สำหรับ struct เราสามารถกำหนด struct student ให้เป็นประเภทข้อมูลใหม่
+
+Self-Referential Structures
+ Self-Referential Structures เป็นโครงสร้างออกแบบมาเพื่อ Linked list 
+ โดยการใช้ struct และภายในจะมีฟิลด์เป็น pointer เพื่อไปอ้างอิงกลับไป 
+ Ex struct node {
+        int data;
+        struct node *next;
+    };
+ node ใช้อ้างอิงถึงหน่วยหรือโหนดเพื่อเก็บข้อมูล 1 หน่วย
+ struct node เก็บข้อมูล 2 ส่วน 
+ ส่วนที่เก็บข้อมูลใช้ฟิลด์ data (ประเภท int)
+ ตัวแปร pointer ใช้อ้างอิงไปโหนดถัดไป Linked list ใช้ฟิลด์ next 
+
+Doubly Linked List
+ Singly Linked List โดยรู้ได้จากการที่แต่ละโหนดที่อยู่ติดกันเชื่อมต่อถึงกันผ่านลิงค์เดียว
+ Doubly Linked List โดยรู้ได้จากการที่แต่ละโหนดที่อยู่ติดกันเชื่อมต่อกันด้วย 2 ลิงค์
