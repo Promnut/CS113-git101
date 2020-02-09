@@ -1,0 +1,36 @@
+Functions and Program Structure
+Function Definition
+การนิยามฟังก์ชัน 
+return-value-type function-name(parameter-list){
+    declarations
+
+    statement
+    
+}
+Ex 
+int odd(int value){
+    if (value % 2 != 0)
+        return 1;
+    else
+        return 0;
+}
+
+Function Prototypes
+ีรูปแบบฟังก์ชัน 
+return-value-type function-name(parameter-list);
+Parameter list ไม่ต้องเขียนชื่อตัวแปรก็ได้ แต่ต้องระบุประเภทข้อมูล
+ถ้าไม่ต้องการ Parameter ก็ใช้ void แทน
+Ex 
+int odd(int);
+
+Function Call - Call by Value
+การส่งข้อมูลผ่าน parameter จากuserไปฟังก์ชันถูกเรียกว่า pass by value
+การส่งผ่านค่าเป็นแค่การส่งค่าจากuser pass by reference 
+ภาษา C มีการส่ง parameter ลักษณะเดียว pass by value
+
+Standard Library Functions and Math Library Functions
+ฟังก์ชัน printf scanf  getchar เป็นตัวอย่างของฟังก์ชัน Standard Library functions
+ฟังก์ชัน sqrt exp log เป็นตัวอย่างของฟังก์ชัน  Math Library functions
+ปกติ gcc จะ link ฟังก์ชัน Standard Library โดยอัตโนมัติ 
+แต่ Math Library functions จะไม่ได้ถูก link ให้อัตโนมัติ 
+User ต้อง #include <math.h> ด้วย
