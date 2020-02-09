@@ -1,0 +1,29 @@
+Dynamic Memory Allocation
+Pointers เป็นตัวแปรที่ใช้เก็บตำแหน่งที่อยู่ของตัวแปร
+Address-of operator (&) เป็น unary operator ที่ต้องการเพียง 1 operand
+& เป็น operator ที่ใช้หาค่าตำแหน่งในหน่วยความจำของ operand 
+ Ex p = &c;
+ ตัวแปร p มีค่าเท่ากับ Address ของตัวแปร C 
+dereferencing operator (*) หรือ indirection operator เป็น
+unary operator โดยที่ * การเข้าถึงข้อมูลที่ถูก้างอิงตำแหน่ง 
+
+ฟังก์ชัน scanf() เป็นการรับข้อมูลเข้ามาในโปรแกรมผ่าน standard input
+Ex  int input;
+    scanf("%d", &input);
+
+Pointers กับ Arrays
+ชื่อตัวแปร Arrays เป็นนิพจน์ที่บอกค่า Address ของ Arrays 
+Ex
+    int a [] = {1,2,3,4,5};
+    int *ptr_a = a;
+    printf("%d ",*ptr_a);
+    ptr_a++;
+    printf("%d",*ptr_a);
+    คำตอบ 1,2
+
+การเรยีกฟังก์ชันแบบ Call by Reference
+การส่งผ่านพารามิเตอร์ไปฟังก์ชันทำได้ 2 ลักษณะ     
+ call by value
+ call by reference
+ภาษา C การส่งค่าพารามิเตอร์ไปฟังก์ชันผ่านการเรียกฟังก์ชันเป็น call by value  
+แต่ใช้ Pointer จำลองส่งผ่าน call by reference ได้
