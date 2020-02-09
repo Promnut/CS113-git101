@@ -1,0 +1,53 @@
+Data Types and Size
+เก็บจำนวนเต็ม 
+-char 1 ไบท์
+-int 4 ไบท์ 
+-float 4 ไบท์
+-double 8 ไบท์
+
+Ex int x = 8.5 -> 9
+   float y = 2.5 -> 2.5
+
+short ช่วยลดพื้นที่ให้กับจำนวนเต็ม
+long ช่วยเพิ่มพื้นที่
+
+Ex long int 
+   short int
+
+Arithmetic Operators
+ +, -, *, /, %
+
+% ไม่สามารถใช้กับ float double
+/ ถ้าตัวตั้งและตัวหารเป็นจำนวนเต็มผลหารจะเป็น int  
+
+Relational Operators
+ >
+ >=
+ <
+ <=
+ ==
+ != 
+Ex 6>3 -> True
+   5<2 -> False
+   5==5 -> True
+   5!=5 -> False
+
+Logical Operators 
+ &&
+ ||
+ !
+
+Increment and Decrement Operators
+n++
+++n
+n--
+--n
+n++ กับ n-- บวกหลังจากทำคำสั่งก่อนหน้านี้เสร็จ
+++n กับ --n บวกก่อนแล้วค่อยไปทำคำสั่งที่เหลือ
+
+Bitwise Operators
+& (AND) Ex 101 & 111 -> 101
+| (inclusive OR) Ex 111 | 000 -> 111
+^ (exclusive OR) Ex 111 ^ 101 -> 010
+<< (left shift)  Ex 001 << 1 -> 010
+>> (right shift) Ex 001 >> 1 -> 000
