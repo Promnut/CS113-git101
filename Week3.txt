@@ -1,0 +1,39 @@
+Control Flow
+If-Else
+if (expression){
+    statements1
+}
+else (){    
+    statements2
+}
+
+Else-If
+if (expression1){
+    statement1
+}
+else if (expression2){
+    statement2
+}
+else (){ 
+    statement3
+}
+expressionตัวไหนเป็นจริงก็จะทำexpressionนั้น
+
+Loops
+-While 
+while (expression){
+    statement
+}
+-for 
+for (expr1; expr2; expr3){
+    statement
+}
+expr1 expr3 จะเป็นการกำหนดค่าหรือเรียกใช้ฟังก์ชันส่วน expr2 จะเป็นการเปรียบเทียบ
+for (;;){
+    statement
+}
+ถ้าเป็นแบบข้างบนจะเป็น loop แบบไม่สิ้นสุด 
+
+Break และ Continue
+break จะทําใหโปรแกรมหลุดจาก loop ทันที
+continue จะบังคับให้เกิดวนซ้ำใหม่ทันที
