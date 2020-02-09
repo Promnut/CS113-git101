@@ -1,0 +1,22 @@
+Functions and Program Structure
+Local Variables 
+เป็นตัวแปรที่อยู่ภายใน block ของฟังก์ชันรวมถึงตัวแปรพาราพิเตอร์
+
+Global Variables
+ตัวแปรที่ถูกประกาศไว้อยู่ภายนอกฟังก์ชัน 
+หากตัวแปร local ชื่อซ้ำกับตัวแปร global การแก้ไขใน local จะไม่มีผล่อ global
+
+Storage Classes
+ใช้กับตัวแปรใน 4 ลักษณะ ผ่านการใช้คีย์เวิร์ด auto,register,extern, static
+storage class 4 แบ่งออกเป็น  2 storage duration
+ automatic storage duration
+ static storage duration
+auto และ register ใช้กำหนดตัวแปรที่เป็น automatic storage duration
+ตัวแปร local เป็นตัวแปรที่อยู่ใน automatic storage duration
+register เป็นคอมไพเลอร์ให้เก็บค่าตัวแปรไว้ใน register
+extern และ static ใชกำหนดตัวแปรที่เป็น static storage duration
+และตัวแปร global และชื่อฟังก์ชันเป็น extern 
+
+Separate Compilation
+การนิยามฟังก์ชันและการเรียกใช้ฟังก์ชันไม่จำเป็นต้องถูกคอมไพล์ในเวลาเดียวกัน
+และอยู่คนละไฟล์ได้
