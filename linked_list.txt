@@ -1,0 +1,49 @@
+//6210451373 Pheemaphat Promnut
+#include <stdio.h>
+#include <stdlib.h>
+struct node{
+    int data;
+    struct node *next;
+};
+void sort(struct node *head){
+    struct node *pre,*nt;
+    int swap;
+    for(pre = head;pre!=NULL;pre = pre->next){
+        for(nt = pre;nt!=NULL;nt = nt ->next){
+            if(nt->data < pre->data){
+                swap = pre->data;
+                pre->data = nt->data;
+                nt->data = swap;
+            }   
+        }
+    }
+}
+void creatlinklist(struct node **head, int num){
+    struct node *make;
+    struct node *tmp;
+    make = (struct  node *)malloc(sizeof(struct node));
+    make->data = num;
+    make->next = NULL;
+    if(*head == NULL){
+        *head = make;
+    }else{
+        for(tmp = *head;tmp->next!=NULL;tmp = tmp->next);
+        tmp->next = make;
+    }
+    sort(*head);   
+}   
+int main()
+{
+    struct node *head = NULL;
+    int n;
+    for(;;){
+        scanf("%d",&n);
+        if(n <= -1){
+            break;
+        }creatlinklist(&head,n);
+    }
+    struct node *tmp;
+    for(tmp = head;tmp != NULL;tmp = tmp->next){
+        printf("%d\n",tmp->data);
+    }
+}
