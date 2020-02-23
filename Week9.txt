@@ -1,0 +1,57 @@
+Structs
+คือ กลุ่มของตัวแปรที่สร้างและเก็บไว้ในตัวแปรเดียวที่เรียกว่า data Structs
+เป็นตัวแปรที่ใช้สำหรับเก็บข้อมูลที่มีความเกี่ยวข้องกันในรูปแบบ
+ออบเจ็ค Structs นั้นสามารถมีสมาชิกเป็น Primitive datatype reference type
+และ method ได้ ส่วนใหญ่มักจะใช้ Structs สำหรับเก็บกลุ่มของข้อมูลที่ไม่มาก
+
+การประกาศโครงสร้างข้อมูล
+Ex 
+    struct struct_name
+{
+    member_type1 member_name1;
+    member_type2 member_name2;
+    .
+    .
+} object_names;
+
+struct_name เป็นชื่อของโครงสร้างข้อมูลโดยมีรูปแบบการตั้งชื่อเหมือนตัวแปร 
+และในบล็อคของ struct จะเป็นการประกาศสมาชิกเป็นไดทั้งตัวแปรและฟังก์ชัน
+ส่วน object_names เป็นตัวแปรออบเจ็คของโครงสร้างข้อมูล
+
+การใช้ struct กับ array
+Ex (ข้อมูลจากอินเตอร์เน็ต)
+#include <stdio.h>
+
+struct point
+{
+    int x;
+    int y;
+};
+
+int main()
+{
+    const int TOTAL_POINT = 4;
+
+    struct point p[TOTAL_POINT];
+    p[0].x = 1;
+    p[0].y = 2;
+    p[1].x = -3;
+    p[1].y = -5;
+    p[2].x = 4;
+    p[2].y = 8;
+    p[3].x = 0;
+    p[3].y = -1;
+
+    printf("There are %d steps for robot to walk.\n", TOTAL_POINT);
+
+    int i = 0;
+    for (i = 0; i < TOTAL_POINT; i++)
+    {
+        printf("Step %d: walk to point %d, %d\n", i, p[i].x, p[i].y);
+    }
+
+    return 0;
+}
+
+ในตัวอย่าง ได้สร้าง struct สำหรับเก็บตำแหน่งของ x และ y และ
+เราก็สร้าง array ในการเก็บลำดับ โดยในค่าคงที่ TOTAL_POINT นั้นเป็นลำดับข้อมูงทั้งหมด
